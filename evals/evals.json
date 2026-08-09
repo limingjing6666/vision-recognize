@@ -1,0 +1,43 @@
+{
+  "skill_name": "vision-recognize",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我看看这张图：C:\\Users\\23725\\Pictures\\漫剧\\Anime_man_looking_up_shock_202607211620.jpeg 里面是什么场景",
+      "expected_output": "用中文自然语言描述图片内容（废土/系统觉醒主题的动漫场景），并附结构化 JSON",
+      "expectations": [
+        "输出包含 2-3 段中文自然语言描述",
+        "输出包含 ```json 代码块，含 主题/人物/场景 等字段",
+        "描述内容与已知图片内容一致（年轻男性、全息 HUD 界面、废墟城市）"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "这张图里有什么文字内容？全部列出来，没有就说没有。C:\\Users\\23725\\Pictures\\漫剧\\ChatGPT Image 2026年8月5日 10_17_17.png",
+      "expected_output": "如实回答图片中的文字（可能为无文字，也可能列出 HUD 上的字样）",
+      "expectations": [
+        "输出直接回答文字内容或明确说没有文字",
+        "不编造图片中不存在的文字"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "对比这两张图的画风和色调：C:\\Users\\23725\\Pictures\\漫剧\\Anime_male_protagonist_kneeling_202607211620.jpeg 和 C:\\Users\\23725\\Pictures\\漫剧\\Giant_monster_looms_over_man_202607211620.jpeg",
+      "expected_output": "一段对比文字，指出两张图的画风/色调异同（日式动漫插画 vs 厚涂概念艺术，冷暗 vs 炽热）",
+      "expectations": [
+        "输出包含对两张图各自的画风描述",
+        "输出包含色调/氛围对比",
+        "不把两张图混为一谈"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "看一下这张图里的人物表情和情绪：C:\\Users\\23725\\Pictures\\漫剧\\Anime_man_looking_up_shock_202607211620.jpeg",
+      "expected_output": "针对表情和情绪的定向回答（震惊、紧张、难以置信）",
+      "expectations": [
+        "输出聚焦于人物表情与情绪",
+        "提到\"震惊/惊讶/紧张\"等与已知内容一致的情绪词"
+      ]
+    }
+  ]
+}
